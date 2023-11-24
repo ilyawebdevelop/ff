@@ -13222,6 +13222,16 @@ h5 {
   grid-template-columns: 50% 50%;
   align-items: center;
 }
+@media (max-width: 1199px) {
+  .choice__top {
+    display: block;
+  }
+}
+@media (max-width: 1199px) {
+  .choice__top-left {
+    margin-bottom: 25px;
+  }
+}
 .choice__top-list {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -13232,10 +13242,62 @@ h5 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 100%);
   padding: 24px 50px 24px 50px;
 }
+@media (max-width: 1400px) {
+  .choice__top-list {
+    column-gap: 20px;
+  }
+}
+@media (max-width: 1199px) {
+  .choice__top-list {
+    width: fit-content;
+  }
+}
+@media (max-width: 767px) {
+  .choice__top-list {
+    padding: 20px;
+    column-gap: 10px;
+    display: flex;
+  }
+}
+@media (max-width: 360px) {
+  .choice__top-list {
+    column-gap: 5px;
+  }
+}
+@media (max-width: 1400px) {
+  .choice__top-text {
+    font-size: 15px;
+    line-height: 19px;
+  }
+}
+@media (max-width: 1199px) {
+  .choice__top-text {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 991px) {
+  .choice__top-text {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+@media (max-width: 370px) {
+  .choice__top-text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
 .choice__top-item {
   grid-column: 4 span;
   color: #A5ACB4;
   font-weight: 300;
+}
+@media (max-width: 575px) {
+  .choice__top-item {
+    grid-column: unset;
+  }
 }
 .choice__top-num {
   width: fit-content;
@@ -13246,10 +13308,27 @@ h5 {
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 767px) {
+  .choice__top-num img {
+    width: 76px;
+    min-width: 75px;
+    margin-bottom: 3px;
+  }
+}
 .choice__top-num span {
   position: absolute;
   right: 0px;
   top: 50px;
+}
+@media (max-width: 767px) {
+  .choice__top-num span {
+    top: 16px;
+    font-size: 16px;
+    right: 5px;
+  }
+}
+.choice-slider {
+  border-radius: 24px;
 }
 .choice__title {
   font-size: 76px;
@@ -13261,6 +13340,20 @@ h5 {
   padding-right: 50px;
   margin-bottom: 0;
 }
+@media (max-width: 1400px) {
+  .choice__title {
+    font-size: 56px;
+    line-height: 60px;
+    max-width: 990px;
+  }
+}
+@media (max-width: 991px) {
+  .choice__title {
+    font-size: 38px;
+    line-height: 42px;
+    max-width: 460px;
+  }
+}
 .choice__title span {
   display: block;
   font-family: "BuyanThin";
@@ -13268,9 +13361,37 @@ h5 {
   left: 200px;
   -webkit-text-fill-color: #35BAEC;
 }
+@media (max-width: 991px) {
+  .choice__title span {
+    left: 95px;
+  }
+}
+.choice .scrollbar__nav {
+  margin-top: 15px;
+}
+.choice .scrollbar__nav-link--sm {
+  color: #A5ACB4;
+  -webkit-text-fill-color: #A5ACB4;
+}
+.choice .scrollbar__nav-arrow {
+  display: none;
+}
+.choice .scrollbar__nav-count {
+  -webkit-text-fill-color: #92A0AD;
+  border-color: #AE38FB;
+}
+.choice .scrollbar__nav-count span:nth-child(2) {
+  -webkit-text-fill-color: #92A0AD;
+}
 
 .choice__center-slider {
   margin-top: 33px;
+}
+@media (max-width: 575px) {
+  .choice__center-slider {
+    padding-right: 35px;
+    overflow: visible;
+  }
 }
 
 .choice__center-slide {
@@ -13289,11 +13410,24 @@ h5 {
   color: #A5ACB4;
   line-height: 24px;
 }
+@media (max-width: 575px) {
+  .choice__center-text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
 
 .choice__center-img {
   position: absolute;
   right: 0;
   top: 0;
+  z-index: -1;
+}
+@media (max-width: 1400px) {
+  .choice__center-img {
+    width: 110px;
+    top: 30px;
+  }
 }
 
 .choice__bottom {
@@ -13301,6 +13435,11 @@ h5 {
   border: 1px solid #414141;
   margin-top: 25px;
   padding: 30px;
+}
+@media (max-width: 991px) {
+  .choice__bottom {
+    padding: 24px;
+  }
 }
 
 .choice-slide:hover::before {
@@ -13326,6 +13465,11 @@ h5 {
   object-fit: cover;
   position: relative;
 }
+@media (max-width: 991px) {
+  .choice-slide__img {
+    height: 166px;
+  }
+}
 
 .choice-slide__btn {
   width: fit-content;
@@ -13336,6 +13480,12 @@ h5 {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
+}
+
+@media (max-width: 991px) {
+  .choice__bottom-icon {
+    width: 78px;
+  }
 }
 
 .cooperation {
