@@ -211,7 +211,7 @@ document.querySelectorAll('.whom-slider').forEach(n => {
       var slides_count = n.querySelectorAll(".swiper-slide"); // <- add this
       let offer_1 = n.closest('.whom').querySelector('.scrollbar__nav-count');
       if (offer_1) {
-        offer_1.innerHTML = '<span>0' + (mySwiperBenefit.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
+        offer_1.innerHTML = '<span>0' + (mySwiperWhom.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
       }
     }, 1000);
   }
