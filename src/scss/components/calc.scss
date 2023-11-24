@@ -1,18 +1,64 @@
 .calc {
   background-color: #fff;
 
+  .container {
+    @media(max-width: 575px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
   &__title {
     font-size: 76px;
     line-height: 76px;
     max-width: 1200px;
 
+    @media(max-width: 1400px) {
+      font-size: 56px;
+      line-height: 60px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media(max-width: 991px) {
+      font-size: 38px;
+      line-height: 42px;
+      max-width: 600px;
+    }
+
+
+
     &-wrapper {
       position: relative;
+
+      @media(max-width: 575px) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
 
       img {
         position: absolute;
         left: -70px;
         top: 0;
+
+        @media(max-width: 1400px) {
+          left: unset;
+          right: 0;
+          top: 35px;
+        }
+
+        @media(max-width: 1199px) {
+          width: 120px;
+        }
+
+        @media(max-width: 767px) {
+          width: 80px;
+          top: 70px;
+        }
+        @media(max-width: 370px){
+          top: 110px;
+        }
       }
     }
   }
@@ -23,24 +69,54 @@
     border-radius: 24px;
     padding: 90px;
 
+    @media(max-width: 1199px) {
+      padding: 60px;
+    }
+
+    @media(max-width: 991px) {
+      padding: 40px;
+    }
+
+    @media(max-width: 575px) {
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 20px;
+    }
+
     &-name {
       margin-bottom: 16px;
       color: #92A0AD;
       font-size: 20px;
       font-weight: 500;
+
+      @media(max-width: 1199px) {
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 8px;
+      }
     }
+
     &-quantity {
       font-size: 48px;
       color: #92A0AD;
       position: absolute;
       bottom: 35px;
+
+      @media(max-width: 1199px) {
+        bottom: 21px;
+      }
     }
+
     &-minus {
       left: 30px;
+      @media(max-width: 575px){
+        bottom: 23px;
+      }
     }
+
     &-plus {
       right: 30px;
-  
+
     }
 
     &-grid {
@@ -49,27 +125,53 @@
       column-gap: 24px;
       row-gap: 30px;
       align-items: flex-end;
+
+      @media(max-width: 1199px) {
+        row-gap: 20px;
+        column-gap: 20px;
+      }
+
+      .calc__form-col--50 {
+        @media(max-width: 991px) {
+          grid-column: 6 span;
+        }
+      }
     }
 
     &-col {
       grid-column: 6 span;
       position: relative;
+
+      @media(max-width: 991px) {
+        grid-column: 12 span;
+      }
     }
 
     &-top {
       padding-bottom: 60px;
+      @media(max-width: 767px){
+        padding-bottom: 25px;
+      }
     }
 
     &-bottom {
       border-top: 1px solid rgba(146, 160, 173, 0.19);
       padding-top: 32px;
+      @media(max-width: 767px){
+        padding-top: 25px;
+      }
 
       p {
         color: #92A0AD;
         font-size: 20px;
         font-weight: 500;
+        @media(max-width: 575px){
+          font-size: 14px;
+          line-height: 17px;
+        }
       }
     }
+
     .input-wrapper {
       &--lg {
         input {
@@ -84,9 +186,23 @@
           justify-content: center;
           padding-bottom: 5px;
           font-weight: 400;
+
+          @media(max-width: 1199px) {
+            font-size: 32px;
+            line-height: 32px;
+            height: 66px;
+            padding-bottom: 0;
+            padding-left: 40px;
+          }
+
           &::placeholder {
             font-size: 42px;
             line-height: 42px;
+
+            @media(max-width: 1199px) {
+              font-size: 32px;
+              line-height: 32px;
+            }
           }
         }
       }
@@ -104,9 +220,10 @@
 
   .input-wrapper {
     grid-column: 4 span;
-  
-    &:not(:last-child){
+
+    &:not(:last-child) {
       position: relative;
+
       &::after {
         content: '';
         position: absolute;

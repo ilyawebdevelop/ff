@@ -25,13 +25,20 @@
 
 .ticker--purple {
   background: linear-gradient(270deg, #6A1D98 82.42%, rgba(106, 29, 152, 0.00) 100.36%);
-  width: calc(100% - 200px);
+  width: calc(100% - 50px);
   margin-left: auto;
   position: relative;
   padding-top: 14px;
   padding-bottom: 10px;
+  @media(max-width: 575px){
+    width: calc(100% - 15px);
+  }
+  
   .ticker-slide {
     position: relative;
+    @media(max-width: 575px){
+      font-size: 21px;
+    }
     &::after {
       content: '';
       position: absolute;
@@ -41,15 +48,28 @@
       width: 17px;
       height: 17px;
       background: url('@img/ticker/star.svg') no-repeat center center / 17px;
+      @media(max-width: 991px){
+        right: -28px;     
+      }
+      @media(max-width: 575px){
+        top: 48%;
+      }
     }
   }
 }
 .ticker-wrapper{
   background-color: #fff;
   margin-top: -41px;
+  @media(max-width: 575px){
+    margin-top: -27px;
+  }
 }
 .ticker-img {
   position: absolute;
   top: -19px;
   z-index: 1;  
+  @media(max-width: 991px){
+    height: 76px;
+    top: -12px;
+  }
 }

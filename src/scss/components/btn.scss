@@ -21,8 +21,6 @@
         }
     }
 
-    &--purple {}
-
 }
 
 .header__btn {
@@ -141,6 +139,10 @@
     padding: 0;
     border: none;
     transition: box-shadow .2s linear;
+    @media(max-width: 1199px){
+        font-size: 18px;
+        height: 66px;
+    }
 }
 
 .price__download {
@@ -154,12 +156,22 @@
     background: rgba(255, 255, 255, 0.06);
     padding-left: 24px;
     padding-right: 36px;
+    @media(max-width: 991px){
+        height: 65px;
+        padding-left: 16px;
+        padding-right: 8px;
+        column-gap: 15px;
+    }
 
     span {
         background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0.67) 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        @media(max-width: 575px){
+            max-width: 100px;       
+            line-height: 18px;
+        }
     }
 
     img {

@@ -220,6 +220,9 @@ h5 {
 
 .select-wrapper {
   background: url('@img/icons/select-arrow.svg') no-repeat right 50px center / 16px;
+  @media(max-width: 1199px){
+    background: url('@img/icons/select-arrow.svg') no-repeat right 20px center / 16px;
+  }
 
   select {
     -webkit-appearance: none;
@@ -235,6 +238,13 @@ h5 {
     color: #92A0AD;
     font-weight: 500;
     padding-right: 70px;
+    @media(max-width: 1199px){
+      font-size: 18px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 23px;
+      padding-right: 40px;
+    }
   }
 }
 
@@ -250,9 +260,18 @@ h5 {
     color: #92A0AD;
     font-weight: 500;
     padding-right: 40px;
+    @media(max-width: 1199px){
+      font-size: 18px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 23px;
+    }
 
     &::placeholder {
       color: #92A0AD;
+      @media(max-width: 1199px){
+        font-size: 18px;
+      }  
     }
   }
 }

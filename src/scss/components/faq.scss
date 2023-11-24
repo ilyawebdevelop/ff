@@ -1,6 +1,9 @@
 .faq {
   background-color: #fff;
   padding-bottom: 40px;
+  @media(max-width: 991px){
+    padding-top: 20px;
+  }
 
   &__wrapper {
     display: grid;

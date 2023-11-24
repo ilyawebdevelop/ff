@@ -28,7 +28,7 @@ new Swiper(jQuery('.ticker-slider')[0], {
   },
 });
 
-// Инициализация слайдера ticker-slider
+// Инициализация слайдера ticker-slider 2
 new Swiper(jQuery('.ticker-slider-purple')[0], {
   slidesPerView: 'auto',
   spaceBetween: 85,
@@ -37,6 +37,14 @@ new Swiper(jQuery('.ticker-slider-purple')[0], {
   autoplay: {
     delay: 1,
     disableOnInteraction: true
+  },
+  breakpoints: {
+    0: {
+      spaceBetween: 40,
+    },
+    992: {
+      spaceBetween: 85,
+    },
   },
   a11y: false,
   allowTouchMove: false,
