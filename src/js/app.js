@@ -146,24 +146,48 @@ document.querySelectorAll('.choice-slider').forEach(n => {
 });
 
 // Инициализация слайдера cooperation-slider
-const cooperationSlider = document.querySelector('.cooperation-slider');
-var mySwiperCooperation = new Swiper(cooperationSlider, {
-  slidesPerView: 6,
-  spaceBetween: 30,
-  speed: 800,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+document.querySelectorAll('.cooperation-slider').forEach(n => {
+  const mySwiperCooperation = new Swiper(n, {
+    slidesPerView: 6,
+    spaceBetween: 30,
+    speed: 800,
+    on: {
+      slideChange: function () {
+        var slides_count = n.querySelectorAll(".swiper-slide"); // <- add this
+        let offer = n.closest('.cooperation').querySelector('.scrollbar__nav-count');
+        offer.innerHTML = '<span>0' + (this.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
+      }
     },
-    576: {
-      slidesPerView: 2,
-      spaceBetween: 10,
+    scrollbar: {
+      el: '.cooperation .swiper-scrollbar',
+      draggable: true,
     },
-    992: {
-      slidesPerView: 6,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      992: {
+        slidesPerView: 6,
+      },
     },
-  },
+  });
+
+  function change() {
+
+    setTimeout(function () {
+      var slides_count = n.querySelectorAll(".swiper-slide"); // <- add this
+      let offer_1 = n.closest('.cooperation').querySelector('.scrollbar__nav-count');
+      if (offer_1) {
+        offer_1.innerHTML = '<span>0' + (mySwiperCooperation.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
+      }
+    }, 1000);
+  }
+  change();
 });
 
 // Инициализация слайдера benefit-slider

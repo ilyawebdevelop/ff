@@ -6,6 +6,10 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 40px;
+
+    @media(max-width: 991px) {
+      column-gap: 0;
+    }
   }
 
   &__left {
@@ -14,12 +18,44 @@
 
   &__right {
     grid-column: 6 span;
+
+    @media(max-width: 991px) {
+      grid-column: 12 span;
+    }
+  }
+
+  &__img {
+    @media(max-width: 991px) {
+      max-width: 190px;
+    }
   }
 
   &__top {
+    @media(max-width: 991px) {
+      display: flex;
+      align-items: center;
+    }
+
     &-title {
       font-size: 76px;
       line-height: 76px;
+
+      @media(max-width: 1400px) {
+        font-size: 56px;
+        line-height: 60px;
+        max-width: 990px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      @media(max-width: 991px) {
+        font-size: 38px;
+        line-height: 42px;
+        max-width: 170px;
+        margin-right: unset;
+        margin-left: unset;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -27,6 +63,22 @@
     font-size: 72px;
     line-height: 72px;
     margin-top: 0;
+
+    @media(max-width: 1400px) {
+      font-size: 56px;
+      line-height: 60px;
+      max-width: 990px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+
+    @media(max-width: 991px) {
+      font-size: 38px;
+      line-height: 42px;
+      max-width: 460px;
+      margin-top: 40px;
+    }
   }
 
   &__button {
@@ -37,19 +89,33 @@
     border-radius: 50%;
     background: #35BAEC url('@img/icons/minus.svg') no-repeat center center / 17px;
 
+    @media(max-width: 767px) {
+      width: 33px;
+      height: 33px;
+      min-width: 33px;
+    }
+
   }
 }
 
 .accordion-item {
   padding-top: 17px;
   padding-bottom: 17px;
-  border-radius: 50px;
+  border-radius: 35px;
   padding-right: 17px;
   border: none;
   border-right: 1px solid #35BAEC;
   background: rgba(146, 160, 173, 0.08);
   padding-left: 40px;
   margin-bottom: 17px;
+
+  &.collapsed {
+    border-radius: 35px;
+  }
+
+  @media(max-width: 767px) {
+    padding-left: 23px;
+  }
 
   &.collapsed {
     .faq__button {
@@ -61,17 +127,26 @@
     column-gap: 20px;
     cursor: pointer;
   }
+
   h5 {
     font-size: 18px;
     line-height: 18px;
     color: #1E1E1E;
+
+    @media(max-width: 767px) {
+      font-size: 16px;
+      line-height: 17px;
+    }
   }
 }
+
 .accordion-item:first-of-type {
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+
 }
+
 .accordion-item:last-of-type {
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }

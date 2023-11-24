@@ -38,6 +38,9 @@
     &--active {
       background-color: #35BAEC;
       color: #fff;
+      -webkit-box-shadow: 0px 32px 29px -16px rgba(53, 186, 236, 0.25);
+      -moz-box-shadow: 0px 32px 29px -16px rgba(53, 186, 236, 0.25);
+      box-shadow: 0px 32px 29px -16px rgba(53, 186, 236, 0.25);      
     }
   }
 }

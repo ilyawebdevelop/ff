@@ -7,6 +7,9 @@
 
   &-slider {
     overflow: visible;
+    @media(max-width: 575px){
+     padding-right: 80px;
+    }
   }
 
   &__title {
@@ -18,13 +21,34 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    @media(max-width: 1400px) {
+      font-size: 56px;
+      line-height: 60px;
+      max-width: 990px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media(max-width: 991px) {
+      font-size: 38px;
+      line-height: 42px;
+      max-width: 460px;
+    }
 
     &_bottom {
       margin-top: 100px;
+      @media(max-width: 575px){
+        margin-top: 30px;
+      }
     }
 
     &_top {
       margin-bottom: 100px;
+      @media(max-width: 991px){
+        margin-bottom: 50px;
+      }
+      @media(max-width: 575px){
+        margin-bottom: 20vw;
+      }
     }
 
     span {
@@ -62,6 +86,25 @@
         width: 193px;
         height: 60px;
         background: url('@img/cooperation/coop_item.svg') no-repeat center center / contain;
+        @media(max-width: 1199px){
+          width: 139px;
+        }
+        @media(max-width: 991px){
+          width: 350px;
+          transform: rotate(-8deg);
+          height: 84px;
+          left: 24px;
+        }
+        @media(max-width: 767px){
+          left: 20px;
+          width: 250px;
+          transform: rotate(-10deg);
+        }
+        @media(max-width: 575px){
+          width: 100%;
+          bottom: calc(100% - 41px);         
+          height: 112px;
+        }
       }
     }
   
@@ -75,12 +118,24 @@
     &:nth-child(2) {
       position: relative;
       margin-top: 50px;
+      @media(max-width: 1400px){
+        margin-top: 30px;
+      }
+      @media(max-width: 991px){
+        margin-top: 0;
+      }
       &::before {
         content: '02';
       }
     }
 
     &:nth-child(3) {
+      @media(max-width: 1400px){
+        margin-top: 60px;
+      }
+      @media(max-width: 991px){
+        margin-top: 0;
+      }
       margin-top: 100px;
       &::before {
         content: '03';
@@ -89,6 +144,12 @@
 
     &:nth-child(4) {
       margin-top: 150px;
+      @media(max-width: 1400px){
+        margin-top: 90px;
+      }
+      @media(max-width: 991px){
+        margin-top: 0;
+      }
       &::before {
         content: '04';
       }
@@ -96,6 +157,12 @@
 
     &:nth-child(5) {
       margin-top: 200px;
+      @media(max-width: 1400px){
+        margin-top: 120px;
+      }
+      @media(max-width: 991px){
+        margin-top: 0;
+      }
       &::before {
         content: '05';
       }
@@ -103,6 +170,12 @@
 
     &:nth-child(6) {
       margin-top: 250px;
+      @media(max-width: 1400px){
+        margin-top: 150px;
+      }
+      @media(max-width: 991px){
+        margin-top: 0;
+      }
       &::before {
         content: '06';
       }
@@ -131,6 +204,25 @@
     border: 1px solid #35BAEC;
     position: relative;
     margin-top: -120px;
+    @media(max-width: 1400px){
+      font-size: 36px;
+      line-height: 36px;
+      max-width: 584px;
+      margin-top: -60px;
+    }
+    @media(max-width: 991px){
+      margin-top: 40px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @media(max-width: 575px){
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 50px;
+    }
 
     &::after {
       content: '';
@@ -141,6 +233,9 @@
       width: 160px;
       height: 87px;
       background: url('@img/cooperation/coop_text.svg') no-repeat center center / contain;
+      @media(max-width: 991px){
+        display: none;
+      }
     }
   }
 
@@ -148,5 +243,21 @@
     position: absolute;
     right: -110px;
     top: 0;
+    @media(max-width: 1400px){
+     width: 280px; 
+     right: -60px;
+    }
+    @media(max-width: 1199px){
+      width: 200px;
+    }
+    @media(max-width: 991px){
+      display: none;
+    }
+  }
+  .scrollbar__nav {
+    margin-top: 30px;
+  }
+  .scrollbar__nav-arrow {
+    display: none;
   }
 }
