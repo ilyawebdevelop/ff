@@ -11177,7 +11177,6 @@ h5 {
   min-width: fit-content;
 }
 .scrollbar__nav-center {
-  border-bottom: 1px solid #D9D9D9;
   width: 100%;
 }
 .scrollbar__nav-link {
@@ -13368,6 +13367,12 @@ h5 {
 }
 .choice .scrollbar__nav {
   margin-top: 15px;
+}
+.choice .swiper-scrollbar {
+  background: #414141;
+}
+.choice .swiper-scrollbar-drag {
+  background-color: #AE38FB;
 }
 .choice .scrollbar__nav-link--sm {
   color: #A5ACB4;

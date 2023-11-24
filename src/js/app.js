@@ -54,46 +54,95 @@ aboutMore?.addEventListener('click', () => {
 
 
 // Инициализация слайдера choice__center-slider
-const choiseCenterSlider = document.querySelector('.choice__center-slider');
-var mySwiperChoise = new Swiper(choiseCenterSlider, {
-  slidesPerView: 3,
-  spaceBetween: 100,
-  speed: 800,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 0,
+document.querySelectorAll('.choice__center-slider').forEach(n => {
+  const mySwiperChoiseCenter = new Swiper(n, {
+    slidesPerView: 3,
+    spaceBetween: 100,
+    speed: 800,
+    on: {
+      slideChange: function () {
+        var slides_count = n.querySelectorAll(".swiper-slide"); // <- add this
+        let offer = n.closest('.choice__center').querySelector('.scrollbar__nav-count');
+        offer.innerHTML = '<span>0' + (this.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
+      }
     },
-    576: {
-      slidesPerView: 2,
-      spaceBetween: 0,
+    scrollbar: {
+      el: '.choice__center .swiper-scrollbar',
+      draggable: true,
     },
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 24,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
     },
-  },
+  });
+
+  function change() {
+
+    setTimeout(function () {
+      var slides_count = n.querySelectorAll(".swiper-slide"); // <- add this
+      let offer_1 = n.closest('.choice__center').querySelector('.scrollbar__nav-count');
+      if (offer_1) {
+        offer_1.innerHTML = '<span>0' + (mySwiperChoiseCenter.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
+      }
+    }, 1000);
+  }
+  change();
 });
 
 // Инициализация слайдера choice-slider
-const choiserSlider = document.querySelector('.choice-slider');
-var mySwiperChoiseBottom = new Swiper(choiserSlider, {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  speed: 800,
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+document.querySelectorAll('.choice-slider').forEach(n => {
+  const mySwiperChoiseCenter = new Swiper(n, {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    speed: 800,
+    on: {
+      slideChange: function () {
+        var slides_count = n.querySelectorAll(".swiper-slide"); // <- add this
+        let offer = n.closest('.choice__bottom').querySelector('.scrollbar__nav-count');
+        offer.innerHTML = '<span>0' + (this.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
+      }
     },
-    576: {
-      slidesPerView: 2,
-      spaceBetween: 10,
+    scrollbar: {
+      el: '.choice__bottom .swiper-scrollbar',
+      draggable: true,
     },
-    992: {
-      slidesPerView: 3,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+      },
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
     },
-  },
+  });
+
+  function change() {
+
+    setTimeout(function () {
+      var slides_count = n.querySelectorAll(".swiper-slide"); // <- add this
+      let offer_1 = n.closest('.choice__bottom').querySelector('.scrollbar__nav-count');
+      if (offer_1) {
+        offer_1.innerHTML = '<span>0' + (mySwiperChoiseCenter.activeIndex + 1) + '' + `</span><span>` + '| 0' + (slides_count.length) + '</span>';
+      }
+    }, 1000);
+  }
+  change();
 });
 
 // Инициализация слайдера cooperation-slider
