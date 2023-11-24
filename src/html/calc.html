@@ -1,0 +1,84 @@
+<section class="calc">
+    <div class="container">
+        <div class="calc__title-wrapper">
+            <img src="@img/calc/img.svg" alt="image" class="calc__img">
+            <h2 class="calc__title text-center section-title mx-auto">
+                <span> Прайс-калькулятор</span> для индивидуального расчета стоимости
+            </h2>
+        </div>
+        <div class="calc__form">
+            <div class="calc__form-top">
+                <div class="calc__form-grid">
+                    <div class="calc__form-col">
+                        <div class="calc__form-name">Габаритность</div>
+                        <div class="select-wrapper">
+                            <select name="gabarit" id="gabarit">
+                                <option value="выбрать" selected disabled>Выберите габаритность товара</option>
+                                <option value="Габарит 1">Габарит 1</option>
+                                <option value="Габарит 2">Габарит 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calc__form-col calc__form-three">
+                        <div class="input-wrapper">
+                            <input type="number" placeholder="Ширина">
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="number" placeholder="Длина">
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="number" placeholder="Высота">
+                        </div>
+                    </div>
+                    <div class="calc__form-col">
+                        <div class="calc__form-name">Услуги</div>
+                        <div class="select-wrapper">
+                            <select name="usluga" id="usluga">
+                                <option value="выбрать" selected disabled>Выберите услугу</option>
+                                <option value="Габарит 1">Габарит 1</option>
+                                <option value="Габарит 2">Габарит 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calc__form-col calc__form-grid">
+                        <div class="calc__form-col">
+                            <div class="calc__form-name">Количество товара, шт</div>
+                            <div class="input-wrapper input-wrapper--lg">
+                                <button class="calc__form-quantity calc__form-minus" type="button"
+                                    onclick="this.nextElementSibling.stepDown();">
+                                    -
+                                </button>
+                                <input type="number" placeholder="0" min="0">
+                                <button class="calc__form-quantity calc__form-plus" type="button"
+                                    onclick="this.previousElementSibling.stepUp();">
+                                    +
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calc__form-col">
+                            <div class="calc__form-name">Вес товара, кг</div>
+                            <div class="input-wrapper input-wrapper--lg">
+                                <input type="number" placeholder="0,0">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calc__form-col">
+                        <div class="calc__form-name">Себестоимость, руб.</div>
+                        <div class="input-wrapper">
+                            <input type="number" placeholder="Введите себестоимость товара">
+                        </div>
+                    </div>
+                    <div class="calc__form-col">
+                        <button class="btn calc__form-btn btn--blue">Заказать индивидуальный расчет</button>
+                    </div>
+                </div>
+            </div>
+            <div class="calc__form-bottom">
+                <p>
+                    *Внимание! Мы рассчитываем индивидуально стоимость под каждого клиента, обращайтесь к нашим
+                    менеджерам за уточнениями.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

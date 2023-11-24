@@ -1,0 +1,131 @@
+.calc {
+  background-color: #fff;
+
+  &__title {
+    font-size: 76px;
+    line-height: 76px;
+    max-width: 1200px;
+
+    &-wrapper {
+      position: relative;
+
+      img {
+        position: absolute;
+        left: -70px;
+        top: 0;
+      }
+    }
+  }
+
+  &__form {
+    background: #FFF;
+    box-shadow: 0px 25px 30px 0px rgba(145, 157, 161, 0.15);
+    border-radius: 24px;
+    padding: 90px;
+
+    &-name {
+      margin-bottom: 16px;
+      color: #92A0AD;
+      font-size: 20px;
+      font-weight: 500;
+    }
+    &-quantity {
+      font-size: 48px;
+      color: #92A0AD;
+      position: absolute;
+      bottom: 35px;
+    }
+    &-minus {
+      left: 30px;
+    }
+    &-plus {
+      right: 30px;
+  
+    }
+
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 24px;
+      row-gap: 30px;
+      align-items: flex-end;
+    }
+
+    &-col {
+      grid-column: 6 span;
+      position: relative;
+    }
+
+    &-top {
+      padding-bottom: 60px;
+    }
+
+    &-bottom {
+      border-top: 1px solid rgba(146, 160, 173, 0.19);
+      padding-top: 32px;
+
+      p {
+        color: #92A0AD;
+        font-size: 20px;
+        font-weight: 500;
+      }
+    }
+    .input-wrapper {
+      &--lg {
+        input {
+          font-size: 42px;
+          line-height: 42px;
+          text-align: center;
+          padding-top: 0;
+          padding-bottom: 0;
+          height: 90px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 5px;
+          font-weight: 400;
+          &::placeholder {
+            font-size: 42px;
+            line-height: 42px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.calc__form-three {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  border-radius: 24px;
+  border: 1px solid #92A0AD;
+  background: #FFF;
+
+  .input-wrapper {
+    grid-column: 4 span;
+  
+    &:not(:last-child){
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #92A0AD;
+        width: 1px;
+        height: 42px;
+      }
+    }
+
+
+
+    input {
+      border: none;
+      padding-left: 22px;
+      padding-right: 22px;
+      text-align: center;
+    }
+  }
+}

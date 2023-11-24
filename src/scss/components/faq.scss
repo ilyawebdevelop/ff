@@ -1,0 +1,77 @@
+.faq {
+  background-color: #fff;
+  padding-bottom: 40px;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 40px;
+  }
+
+  &__left {
+    grid-column: 6 span;
+  }
+
+  &__right {
+    grid-column: 6 span;
+  }
+
+  &__top {
+    &-title {
+      font-size: 76px;
+      line-height: 76px;
+    }
+  }
+
+  .advantages__title--full {
+    font-size: 72px;
+    line-height: 72px;
+    margin-top: 0;
+  }
+
+  &__button {
+    width: 37px;
+    min-width: 37px;
+    height: 37px;
+    background-color: #35BAEC;
+    border-radius: 50%;
+    background: #35BAEC url('@img/icons/minus.svg') no-repeat center center / 17px;
+
+  }
+}
+
+.accordion-item {
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-radius: 50px;
+  padding-right: 17px;
+  border: none;
+  border-right: 1px solid #35BAEC;
+  background: rgba(146, 160, 173, 0.08);
+  padding-left: 40px;
+  margin-bottom: 17px;
+
+  &.collapsed {
+    .faq__button {
+      background: #35BAEC url('@img/icons/plus.svg') no-repeat center center / 17px;
+    }
+  }
+
+  .accord-head {
+    column-gap: 20px;
+    cursor: pointer;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 18px;
+    color: #1E1E1E;
+  }
+}
+.accordion-item:first-of-type {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+.accordion-item:last-of-type {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}

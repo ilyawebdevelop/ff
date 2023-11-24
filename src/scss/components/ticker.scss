@@ -1,0 +1,55 @@
+.ticker {
+  background-color: #1E1E1E;
+  padding-bottom: 9px;
+  padding-top: 12px;
+
+  .swiper-wrapper {
+    transition-timing-function: linear;
+  }
+
+  &-slide {
+    width: fit-content;
+    font-family: $font-family-700;
+    font-size: 56px;
+    line-height: 56px;
+    background: linear-gradient(180deg, #FFF 0%, rgba(255, 255, 255, 0.18) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media(max-width: 991px){
+      font-size: 27px;
+      line-height: 27px;
+    }
+  }
+}
+
+.ticker--purple {
+  background: linear-gradient(270deg, #6A1D98 82.42%, rgba(106, 29, 152, 0.00) 100.36%);
+  width: calc(100% - 200px);
+  margin-left: auto;
+  position: relative;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  .ticker-slide {
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      right: -49px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      background: url('@img/ticker/star.svg') no-repeat center center / 17px;
+    }
+  }
+}
+.ticker-wrapper{
+  background-color: #fff;
+  margin-top: -41px;
+}
+.ticker-img {
+  position: absolute;
+  top: -19px;
+  z-index: 1;  
+}
