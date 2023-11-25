@@ -1,9 +1,12 @@
 // Footer
 .footer {
-  @media(max-width: 1199px){
+  background: url('@img/footer/footer-bg.png') no-repeat center center / cover;
+  @media(max-width: 1199px) {
     padding-bottom: 120px;
   }
-  background: url('@img/footer/footer-bg.png') no-repeat center center / cover;
+  @media(max-width: 767px) {
+    background: url('@img/economy/economy-sm-bg.jpg') no-repeat center center / cover;
+  }
 
   &__top {
     padding-bottom: 24px;
@@ -71,7 +74,8 @@
     color: #92A0AD;
     font-size: 15px;
     line-height: 21px;
-    @media(max-width: 575px){
+
+    @media(max-width: 575px) {
       max-width: 100%;
     }
   }
@@ -126,7 +130,8 @@
         justify-content: flex-start;
         column-gap: 100px;
       }
-      @media(max-width: 375px){
+
+      @media(max-width: 375px) {
         column-gap: 50px;
       }
     }

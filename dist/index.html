@@ -138,7 +138,7 @@
 
                     </div>
                 </div>
-            </div>    
+            </div>
 
 
         </nav>
@@ -146,7 +146,10 @@
         <div class="hamburger" id="toggle">
             <img src="../img/icons/burger.svg" alt="icon">
         </div><!-- /Hamburger Menu -->
-        <button class="header__btn d-none d-xl-block">Заказать звонок</button>
+        <button class="header__btn d-none d-xl-block" data-toggle="modal" data-target="#modal-order">
+            Заказать
+            звонок
+        </button>
     </div>
 
 </header>
@@ -172,10 +175,10 @@
             Бизнес на маркетплейсе без головной боли с <span>Fulfilment-yug.ru</span>
 
         </h1>
-        <button class="intro__btn btn">
+        <a class="intro__btn btn" href="#calc">
             <span>Рассчитать стоимость</span>
             <span>бесплатно</span>
-        </button>
+        </a>
         <div class="socials d-none d-xl-block">
             <ul class="socials__list">
                 <li class="socials__item">
@@ -358,7 +361,7 @@
                         | 05
                     </span>
                 </span>
-                <button class="scrollbar__nav-arrow benefit__nav-arrow-next">
+                <button class="scrollbar__nav-arrow scrollbar__nav-arrow-next">
                     <img src="img/icons/arrow-slider-next.svg" alt="icon">
                 </button>
             </div>
@@ -637,7 +640,8 @@
                         </li>
 
                     </ul>
-                    <button class="economy__btn btn">
+                    <button class="economy__btn btn" data-toggle="modal"
+                    data-target="#modal-connect">
                         <span>
                             Начать сотрудничество
                         </span>
@@ -1056,7 +1060,7 @@
                         Наш менеджер свяжется с вами и обсудит задачи
                     </p>
                     <button class="cooperation__item-btn btn--blue btn">
-                        <span> Отправить заявку</span>
+                        <span data-toggle="modal" data-target="#modal-connect"> Отправить заявку</span>
                     </button>
                 </div><!-- /cooperation__item -->
 
@@ -1700,7 +1704,7 @@
         </div>
     </div>
 </section>
-			<section class="calc">
+			<section class="calc" id="calc">
     <div class="container">
         <div class="calc__title-wrapper">
             <img src="img/calc/img.svg" alt="image" class="calc__img">
@@ -2037,7 +2041,8 @@
                     </a>
                 </div>
                 <div class="mobile-footer__right">
-                    <button class="btn mobile-footer__btn">Сотрудничать</button>
+                    <button class="btn mobile-footer__btn" data-toggle="modal"
+                    data-target="#modal-connect">Сотрудничать</button>
                 </div>
             </div>
         </div>
@@ -2046,12 +2051,126 @@
     <!-- <img src="img/footer/ellipse-1.svg" alt="ellipse" class="footer-ellipse_1"> -->
 </footer>
 		<!-- modal -->
-<!-- event -->
-<div class="modal fade modal-event" id="modal-event" tabindex="-1" aria-labelledby="exampleModalLabel"
+<!-- order -->
+<div class="modal fade modal-order" id="modal-order" tabindex="-1" aria-labelledby="exampleModalLabel"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
+      <div class="modal-socials">
+        <h2 class="modal-title">
+          Закажите звонок<span class="modal-title--sm">Менеджер перезвонит вам в течении 15 минут</span>
+        </h2>
+        <div class="modal-socials__content">
+          <span class="modal-socials__text">Пишите нам</span>
+          <ul class="modal-socials__list">
+            <li class="modal-socials__item">
+              <a href="#" target="_blank">
+                <img src="../img/icons/vk-white.svg" alt="icon">
+                <span>Vkontakte</span>
+              </a>
+            </li>
+            <li class="modal-socials__item">
+              <a href="#" target="_blank">
+                <img src="../img/icons/telegram-white.svg" alt="icon">
+                <span>Telegram</span>
+              </a>
+            </li>
+            <li class="modal-socials__item">
+              <a href="#" target="_blank">
+                <img src="../img/icons/whatsapp-white.svg" alt="icon">
+                <span>Whatsapp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          <img src="img/icons/close-modal.svg" alt="close">
+        </button>
+      </div><!-- /modal-socials -->
+      <div class="modal-form">
+        <div class="modal-form__content">
+          <div class="modal-form__input-wrapper">
+            <input type="text" class="modal-form__input" placeholder="Имя">
+          </div>
+          <div class="modal-form__input-wrapper">
+            <input type="tel" class="modal-form__input" placeholder="Номер телефона">
+          </div>
+          <button class="btn modal-form__btn">Начать сотрудничество</button>
 
+          <div class="agreement">
+            Нажимая кнопку вы соглашаетесь с условиями<a href="#"> Политики конфиденциальности</a>
+          </div>
+
+        </div><!-- /modal-form__content -->
+        <div class="modal-form__market d-flex justify-content-between">
+          <div class="modal-form__market-item">OZON</div>
+          <div class="modal-form__market-item">Wildberries</div>
+          <div class="modal-form__market-item">Яндекс.Маркет</div>
+          <div class="modal-form__market-item">Сбермегамаркет</div>
+        </div>
+      </div><!-- /modal-form -->
+    </div>
+  </div>
+</div>
+
+<!-- connect -->
+<div class="modal fade modal-order" id="modal-connect" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-socials">
+        <h2 class="modal-title">
+          Начните сотрудничество <span>с профессионалами</span>
+        </h2>
+        <div class="modal-socials__content">
+          <span class="modal-socials__text">Пишите нам</span>
+          <ul class="modal-socials__list">
+            <li class="modal-socials__item">
+              <a href="#" target="_blank">
+                <img src="../img/icons/vk-white.svg" alt="icon">
+                <span>Vkontakte</span>
+              </a>
+            </li>
+            <li class="modal-socials__item">
+              <a href="#" target="_blank">
+                <img src="../img/icons/telegram-white.svg" alt="icon">
+                <span>Telegram</span>
+              </a>
+            </li>
+            <li class="modal-socials__item">
+              <a href="#" target="_blank">
+                <img src="../img/icons/whatsapp-white.svg" alt="icon">
+                <span>Whatsapp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+          <img src="img/icons/close-modal.svg" alt="close">
+        </button>
+      </div><!-- /modal-socials -->
+      <div class="modal-form">
+        <div class="modal-form__content">
+          <div class="modal-form__input-wrapper">
+            <input type="text" class="modal-form__input" placeholder="Имя">
+          </div>
+          <div class="modal-form__input-wrapper">
+            <input type="tel" class="modal-form__input" placeholder="Номер телефона">
+          </div>
+          <button class="btn modal-form__btn">Начать сотрудничество</button>
+
+          <div class="agreement">
+            Нажимая кнопку вы соглашаетесь с условиями<a href="#"> Политики конфиденциальности</a>
+          </div>
+
+        </div><!-- /modal-form__content -->
+        <div class="modal-form__market d-flex justify-content-between">
+          <div class="modal-form__market-item">OZON</div>
+          <div class="modal-form__market-item">Wildberries</div>
+          <div class="modal-form__market-item">Яндекс.Маркет</div>
+          <div class="modal-form__market-item">Сбермегамаркет</div>
+        </div>
+      </div><!-- /modal-form -->
     </div>
   </div>
 </div>

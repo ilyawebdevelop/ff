@@ -205,8 +205,8 @@ document.querySelectorAll('.benefit__slider').forEach(n => {
     spaceBetween: 30,
     speed: 800,
     navigation: {
-      nextEl: '.benefit .benefit__nav-arrow-next',
-      prevEl: '.benefit .benefit__nav-arrow-prev',
+      nextEl: '.benefit .scrollbar__nav-arrow-next',
+      prevEl: '.benefit .scrollbar__nav-arrow-prev',
     },
     on: {
       slideChange: function () {
