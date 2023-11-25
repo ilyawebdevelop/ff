@@ -36,7 +36,8 @@
       overflow: visible;
       padding-bottom: 28px;
     }
-    @media(max-width: 575px){    
+
+    @media(max-width: 575px) {
       padding-left: 20px;
       padding-right: 50px;
     }
@@ -80,6 +81,20 @@
       display: flex;
       justify-content: flex-end;
       column-gap: 7px;
+
+      &:hover {
+        img {
+          transform: translateX(5px);
+        }
+      }
+
+      img {
+        transition: transform .2s linear;
+        @media(max-width: 991px){
+          position: relative;
+          bottom: -2px;
+        }
+      }
     }
 
     &-img {
@@ -87,8 +102,10 @@
       border-radius: 12px;
       background: #F5F6FA;
       padding: 22px 42px 26px;
+      height: 244px;
+      @media(max-width: 575px){
+        height: 190px;
+      }
     }
   }
-
-
 }

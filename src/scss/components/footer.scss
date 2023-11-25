@@ -145,6 +145,10 @@
         a {
           color: #fff;
           font-size: 14px;
+          transition: color .2s linear;
+          &:hover {
+            color: #92A0AD;
+          }
         }
       }
     }
@@ -301,6 +305,10 @@
         font-size: 14px;
         line-height: 16px;
         max-width: 180px;
+        transition: color .2s linear;
+        &:hover {
+          color: #92A0AD;
+        }
       }
     }
   }
