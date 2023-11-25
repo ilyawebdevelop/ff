@@ -36,6 +36,7 @@ html {
 body.hidden {
   overflow: hidden
 }
+
 body.modal-open {
   overflow: hidden;
 }
@@ -54,10 +55,11 @@ section {
   padding-top: 90px;
   padding-bottom: 90px;
 
-  @media(max-width: 1199px){
+  @media(max-width: 1199px) {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
   @media(max-width: 991px) {
     padding-top: 45px;
     padding-bottom: 45px;
@@ -223,7 +225,8 @@ h5 {
 
 .select-wrapper {
   background: url('@img/icons/select-arrow.svg') no-repeat right 50px center / 16px;
-  @media(max-width: 1199px){
+
+  @media(max-width: 1199px) {
     background: url('@img/icons/select-arrow.svg') no-repeat right 20px center / 16px;
   }
 
@@ -241,7 +244,8 @@ h5 {
     color: #92A0AD;
     font-weight: 500;
     padding-right: 70px;
-    @media(max-width: 1199px){
+
+    @media(max-width: 1199px) {
       font-size: 18px;
       padding-top: 20px;
       padding-bottom: 20px;
@@ -263,7 +267,8 @@ h5 {
     color: #92A0AD;
     font-weight: 500;
     padding-right: 40px;
-    @media(max-width: 1199px){
+
+    @media(max-width: 1199px) {
       font-size: 18px;
       padding-top: 20px;
       padding-bottom: 20px;
@@ -272,9 +277,10 @@ h5 {
 
     &::placeholder {
       color: #92A0AD;
-      @media(max-width: 1199px){
+
+      @media(max-width: 1199px) {
         font-size: 18px;
-      }  
+      }
     }
   }
 }
@@ -398,6 +404,7 @@ h5 {
       @media(max-width: 991px) {
         font-size: 24px;
       }
+
       &--sm {
         text-transform: unset;
         font-family: $font-family;
@@ -422,6 +429,11 @@ h5 {
   position: relative;
   margin-left: 30px;
 
+  @media(max-width: 991px) {
+    margin-left: 0;
+    line-height: 16px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -431,11 +443,14 @@ h5 {
     width: 20px;
     height: 20px;
     display: block;
+    @media(max-width: 991px){
+      top: 0;
+    }
   }
 
   a {
     -webkit-text-fill-color: #C161FF;
-    display: inline-block;
+    display: initial;
     margin-left: 6px;
   }
 }

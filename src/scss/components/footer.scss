@@ -1,9 +1,11 @@
 // Footer
 .footer {
   background: url('@img/footer/footer-bg.png') no-repeat center center / cover;
+
   @media(max-width: 1199px) {
     padding-bottom: 120px;
   }
+
   @media(max-width: 767px) {
     background: url('@img/economy/economy-sm-bg.jpg') no-repeat center center / cover;
   }
@@ -279,5 +281,88 @@
       color: #fff;
     }
   }
+}
 
+.mobile-footer {
+  // background: #1A1A1A;
+  background: url('@img/footer/fixed-bg.jpg') no-repeat center center / cover;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  
+
+  &__name {
+    color: #786583;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 5px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &:nth-child(1) {
+      .mobile-footer__img {
+        background: url('@img/icons/mobile-nav-1.svg') no-repeat center center / 28px;
+      }
+
+      &:hover {
+        .mobile-footer__img {
+          background: url('@img/icons/mobile-nav-1-active.svg') no-repeat center center / 28px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      .mobile-footer__img {
+        background: url('@img/icons/mobile-nav-2.svg') no-repeat center center / 28px;
+      }
+
+      &:hover {
+        .mobile-footer__img {
+          background: url('@img/icons/mobile-nav-2-active.svg') no-repeat center center / 28px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .mobile-footer__img {
+        background: url('@img/icons/mobile-nav-3.svg') no-repeat center center / 24px;
+      }
+
+      &:hover {
+        .mobile-footer__img {
+          background: url('@img/icons/mobile-nav-3-active.svg') no-repeat center center / 24px;
+        }
+      }
+    }
+
+    img {
+      height: 28px;
+      object-fit: contain;
+    }
+  }
+
+  &__img {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__left {
+    display: flex;
+    column-gap: 25px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
