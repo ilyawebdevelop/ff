@@ -11776,6 +11776,39 @@ h5 {
     column-gap: 12px;
   }
 }
+.modal-socials__item span {
+  transition: color 0.2s linear;
+}
+.modal-socials__item.socials--blue:hover span {
+  color: #1C91FD;
+}
+.modal-socials__item.socials--blue:hover svg {
+  fill: #1C91FD;
+}
+.modal-socials__item.socials--blue-white:hover span {
+  color: #35BAEC;
+}
+.modal-socials__item.socials--blue-white:hover svg {
+  fill: #35BAEC;
+}
+.modal-socials__item.socials--green:hover span {
+  color: #3BBF30;
+}
+.modal-socials__item.socials--green:hover svg {
+  fill: #3BBF30;
+}
+.modal-socials__item.socials--red:hover span {
+  color: #FF0000;
+}
+.modal-socials__item.socials--red:hover svg {
+  fill: #FF0000;
+}
+.modal-socials__item.socials--white:hover span {
+  color: #fff;
+}
+.modal-socials__item.socials--white:hover svg {
+  fill: #fff;
+}
 .modal-socials__item:not(:last-child) {
   margin-bottom: 20px;
 }
@@ -11798,8 +11831,14 @@ h5 {
     column-gap: 5px;
   }
 }
+.modal-socials__item a svg {
+  width: 42px;
+  height: 42px;
+  fill: #fff;
+  transition: fill 0.2s linear;
+}
 @media (max-width: 991px) {
-  .modal-socials__item a img {
+  .modal-socials__item a svg {
     width: 34px;
     height: 34px;
   }
@@ -12097,6 +12136,41 @@ h5 {
 .mobile-socials {
   display: flex;
   column-gap: 20px;
+}
+.mobile-socials__item.socials--blue:hover span {
+  color: #1C91FD;
+}
+.mobile-socials__item.socials--blue:hover svg {
+  fill: #1C91FD;
+}
+.mobile-socials__item.socials--blue-white:hover span {
+  color: #35BAEC;
+}
+.mobile-socials__item.socials--blue-white:hover svg {
+  fill: #35BAEC;
+}
+.mobile-socials__item.socials--green:hover span {
+  color: #3BBF30;
+}
+.mobile-socials__item.socials--green:hover svg {
+  fill: #3BBF30;
+}
+.mobile-socials__item.socials--red:hover span {
+  color: #FF0000;
+}
+.mobile-socials__item.socials--red:hover svg {
+  fill: #FF0000;
+}
+.mobile-socials__item.socials--white:hover span {
+  color: #fff;
+}
+.mobile-socials__item.socials--white:hover svg {
+  fill: #fff;
+}
+.mobile-socials__item svg {
+  width: 42px;
+  height: 42px;
+  fill: #fff;
 }
 .mobile-socials__list {
   display: flex;
@@ -15254,6 +15328,41 @@ h5 {
     column-gap: 12px;
     padding-bottom: 0;
   }
+}
+.footer__socials-item svg {
+  width: 32px;
+  fill: #73657C;
+  height: 32px;
+}
+.footer__socials-item.socials--blue:hover span {
+  color: #1C91FD;
+}
+.footer__socials-item.socials--blue:hover svg {
+  fill: #1C91FD;
+}
+.footer__socials-item.socials--blue-white:hover span {
+  color: #35BAEC;
+}
+.footer__socials-item.socials--blue-white:hover svg {
+  fill: #35BAEC;
+}
+.footer__socials-item.socials--green:hover span {
+  color: #3BBF30;
+}
+.footer__socials-item.socials--green:hover svg {
+  fill: #3BBF30;
+}
+.footer__socials-item.socials--red:hover span {
+  color: #FF0000;
+}
+.footer__socials-item.socials--red:hover svg {
+  fill: #FF0000;
+}
+.footer__socials-item.socials--white:hover span {
+  color: #fff;
+}
+.footer__socials-item.socials--white:hover svg {
+  fill: #fff;
 }
 .footer__socials-name {
   font-size: 14px;
