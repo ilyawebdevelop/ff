@@ -8,9 +8,10 @@
     border-radius: 24px;
     height: 74px;
 
-    &--blue {      
+    &--blue {
         background: #35BAEC;
         position: relative;
+
         &::before {
             content: '';
             position: absolute;
@@ -24,6 +25,7 @@
             mask-composite: exclude;
             z-index: 1;
         }
+
         span {
             background: radial-gradient(50% 50% at 50% 50%, #FFF 0%, rgba(255, 255, 255, 0.67) 100%);
             background-clip: text;
@@ -64,7 +66,13 @@
 
 .intro__btn {
     flex-direction: column;
-    background: radial-gradient(308.5% 20.22% at 80.63% 59.87%, rgba(30, 30, 30, 0.65) 0%, #1E1E1E 100%), #35BAEC;
+    background: #1E1F1F;
+    transition: background .2s linear;
+    overflow: hidden;
+    border: none;
+    // background: radial-gradient(308.5% 20.22% at 80.63% 59.87%, rgba(30, 30, 30, 0.65) 0%, #1E1E1E 100%), #35BAEC;
+
+    // background: url('@img/intro/intro-btn-bg.png') no-repeat center center / cover;
     box-shadow: 0px 11px 17px 0px rgba(0, 0, 0, 0.11);
     backdrop-filter: blur(5px);
     width: 410px;
@@ -72,6 +80,23 @@
     margin-right: auto;
     margin-top: 50px;
     height: 75px;
+    position: relative;
+
+    &:hover {
+        background: radial-gradient(2915.81% 85.75% at 80.63% 59.87%, rgba(30, 30, 30, 0.65) 0%, #1E1E1E 100%), #35BAEC;
+
+        .intro__btn-linear {
+            opacity: 0;
+        }
+    }
+    &:focus {
+        background: radial-gradient(2915.81% 85.75% at 80.63% 59.87%, rgba(30, 30, 30, 0.65) 0%, #1E1E1E 100%), #35BAEC;
+
+        .intro__btn-linear {
+            opacity: 0;
+        }
+    }
+
 
     @media(max-width: 991px) {
         position: absolute;
@@ -91,16 +116,10 @@
         margin-right: auto;
     }
 
-    &:hover {
-        background: radial-gradient(2915.81% 85.75% at 80.63% 59.87%, rgba(30, 30, 30, 0.65) 0%, #1E1E1E 100%), #35BAEC;
-    }
-
-    &:focus {
-        background: radial-gradient(2915.81% 85.75% at 80.63% 59.87%, rgba(30, 30, 30, 0.65) 0%, #1E1E1E 100%), #35BAEC;
-    }
-
     span {
         text-transform: uppercase;
+        position: relative;
+        z-index: 1;
 
         &:nth-child(1) {
             font-size: 18px;
@@ -119,6 +138,19 @@
                 font-size: 14px;
             }
         }
+    }
+
+    &-linear {
+        position: absolute;
+        background: rgb(53, 186, 236);
+        background: linear-gradient(106deg, rgba(53, 186, 236, 0) 73%, rgba(53, 186, 236, 0.4587009804) 80%, rgba(53, 186, 236, 0) 88%);
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        height: 100%;
+        transition: opacity .2s linear;
+
     }
 }
 
